@@ -3,9 +3,6 @@ import { useFinance } from '../../context/FinanceContext'
 import { useState, useRef, useEffect } from 'react'
 
 
-
-
-
 export default function Navbar() {
   const { role, setRole, dark, setDark } = useFinance()
   const [open, setOpen] = useState(false)

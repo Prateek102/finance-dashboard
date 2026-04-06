@@ -39,14 +39,13 @@ export default function TransactionModal({ tx, onClose }) {
   }
 
   const validate = () => {
-    const e = {}
-    if (!form.description.trim()) e.description = 'Required'
-    const amt = parseFloat(form.amount)
-    if (!form.amount || isNaN(amt) || amt <= 0) e.amount = 'Enter a valid amount'
-    if (amt > 10000) e.amount = 'Max amount is ₹10,000'
-    if (!form.date) e.date = 'Required'
-    return e
-  }
+  const e = {}
+  if (!form.description.trim()) e.description = 'Required'
+  const amt = parseFloat(form.amount)
+  if (!form.amount || isNaN(amt) || amt <= 0) e.amount = 'Enter a valid amount'
+  if (!form.date) e.date = 'Required'
+  return e
+}
 
   const handleSubmit = () => {
     const e = validate()
@@ -126,7 +125,6 @@ export default function TransactionModal({ tx, onClose }) {
                 <input
                   type="number"
                   min="1"
-                  max="10000"
                   step="1"
                   className={`input pl-7 ${errors.amount ? 'border-red-400 focus:ring-red-400' : ''}`}
                   placeholder="0"
