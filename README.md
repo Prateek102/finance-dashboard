@@ -169,24 +169,6 @@ The UI is built on a consistent design token system defined in `tailwind.config.
 
 ---
 
-## 🖼️ Adding Your Profile Photo
-
-**Option A — Image in `public/` folder (recommended)**
-```jsx
-// In Navbar.jsx — no import needed
-<img src="/your-photo.png" alt="Profile" className="w-7 h-7 rounded-full object-cover" />
-```
-
-**Option B — Image in `src/assets/` folder**
-```jsx
-// In Navbar.jsx — import at the top
-import myPhoto from '../assets/your-photo.png'
-
-<img src={myPhoto} alt="Profile" className="w-7 h-7 rounded-full object-cover" />
-```
-
----
-
 ## 🧠 How Insights Work
 
 The insights are fully calculated from your real transaction data — nothing is hardcoded.
